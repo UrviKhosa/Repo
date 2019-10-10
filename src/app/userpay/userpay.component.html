@@ -1,11 +1,35 @@
+<div class="container-fluid pl-0 pr-0" >
+        <div>
+<nav class="navbar navbar-expand-md navbar navbar-dark" style="z-index: 10;position: fixed;">
+        <a routerLink='/usermenu'><button type="button" class=" btn-lg btn-outline-light fa fa-home"
+             style="margin-right: 5px" aria-hidden="true"></button></a>
+    <a href="#" class="navbar-brand">Mentor On Demand</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        
+
+       
+
+        <form class="form-inline ml-auto">
+            <a routerLink='/usermenu'><button type="button" class=" btn-lg btn-outline-light fa fa-bell" data-toggle="modal"
+                    data-target="#myModal" style="margin-right: 5px" aria-hidden="true"></button></a>
+                    <a routerLink='/userprofile'><button type="button" class=" btn-lg btn-outline-light fa fa-user" 
+                         style="margin-right: 5px" aria-hidden="true"></button></a>    
+            <a routerLink='/loginuser'><button type="button" class=" btn-lg btn-outline-light fa fa-sign-out"  style="color:white;" aria-hidden="true"></button></a>
+
+        </form>
+    </div>
+</nav>
 <div class="container-fluid py-3">
 <div class="row py-5">
    <div class="col-sm-3"></div>
    <div class="col-sm-4">
       <div class="card">
          <div class="card-body">
-            <h3 class="card-title text-center">Payment</h3>
+            <h3 class="card-title text-center" style="color: white">Payment</h3>
             <div class="form-row">
                <div class="form-group col">
                   <!-- [formGroup]="Payment" -->
@@ -54,25 +78,25 @@
                   </div>
                   <div class="form-row">
                      <div class="form-group col required">
-                        <button class="btn btn-lg btn-primary btn-block"  [disabled]="!PaymentForm.valid">Pay</button>
+                        <button class="btn btn-lg btn-info btn-block"  [disabled]="!PaymentForm.valid">Pay</button>
                      </div>
                   </div>
                   </form>  
                </div>
             </div>
-         </div>
-      </div>
-   </div>
+         
+ 
+  
    <div *ngIf="skillData" class="col-sm-4">
-      <div  class="card" style="width: 18rem;">
-         <div class="card-body">
-            <h5 class="card-title">Your Cart</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Technology - {{skillData[0].name}}
+     
+            <h5 class="card-title" style="color: white">Your Cart</h5>
+            <h6 class="card-subtitle mb-2 text-muted" style="color: white">Technology - {{skillData[0].name}}
                <br>
                Prerequisites - {{skillData[0].prerequisites}}
-            </h6>
-            <p class="card-text">Fees - &#8377; <strong>{{skillData[0].fees}}</strong></p>
+            </h6 >
+            <p class="card-text" style="color: white">Fees - &#8377; <strong>{{skillData[0].fees}}</strong></p>
          </div>
       </div>
    </div>
-</div></div>
+</div></div></div>
+<app-footer></app-footer>
