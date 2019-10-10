@@ -1,0 +1,53 @@
+<div class="container-fluid">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header" >
+                        <h4>Current Trainings</h4>
+                    
+                </div>
+                <div class="card-body">
+<div class="row" id="divcurt" style="z-index: -10;" >
+<div class="col-md-2">
+
+</div>
+<div class="col-md-8 text-center">
+    <div class="table-responsive" >
+        
+        <table class="table table-striped"  >
+            <thead style="color:white">
+                <tr>
+
+                    <th>Technology</th>
+                    <th>Trainer Name</th>
+                    <th>Duration</th>
+                    <th>Timing</th>
+                    <th>Progress</th>
+
+                </tr>
+            </thead>
+            <tbody style="color:white">
+                    <tr *ngFor="let i of myTrainings">
+                            <td>{{i.skillname}}</td>
+                            <td>{{i.mentorName}}</td>
+                            <td>{{i.startDate | date: 'dd/MM/yyyy'}} to {{i.endDate | date: 'dd/MM/yyyy'}}</td>
+                            <td>{{i.timeSlot}}</td>
+                            <td *ngIf="i.progress!=undefined">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 100%">
+                                        {{i.progress}} %
+                                    </div>
+                            </td>
+                            <td *ngIf="i.progress==undefined">
+                                      <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width: 100%">
+                                          Pending
+                                      </div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+</div>
+</div></div>
+</div></div></div>

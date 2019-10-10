@@ -1,0 +1,110 @@
+<div class="container-fluid">
+        
+        <div class="d-flex justify-content-center h-100">
+                <nav class="navbar navbar-expand-md navbar navbar-dark" style="z-index: 10;position: fixed;">
+                        <a routerLink='/usermenu'><button type="button" class=" btn-lg btn-outline-light fa fa-home"
+                             style="margin-right: 5px" aria-hidden="true"></button></a>
+                    <a href="#" class="navbar-brand">Mentor On Demand</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        
+        
+                       
+        
+                        <form class="form-inline ml-auto">
+                            <a routerLink='/usermenu'><button type="button" class=" btn-lg btn-outline-light fa fa-bell" data-toggle="modal"
+                                    data-target="#myModal" style="margin-right: 5px" aria-hidden="true"></button></a>
+                                    <a routerLink='/userprofile'><button type="button" class=" btn-lg btn-outline-light fa fa-user" 
+                                         style="margin-right: 5px" aria-hidden="true"></button></a>    
+                            <a routerLink='/loginuser'><button type="button" class=" btn-lg btn-outline-light fa fa-sign-out"  style="color:white;" aria-hidden="true"></button></a>
+        
+                        </form>
+                    </div>
+                </nav>
+          <div class="card" style="margin-right: 80px;">
+            <div class="card-header">
+                <h3>Approval Request</h3>
+            </div>
+            <div class="card-body"> 
+                        <form class="form-signin" (submit)="onSubmit()">
+                            <div class="form-label-group py-1">
+                                <label for="Time">Time Slot</label>
+                                <select [(ngModel)]="Time" id="Time" name="Time"
+                                    class="form-control mb-2 rounded text-center">
+                                    <option disabled>Select Time</option>
+                                    <option value="09:00 AM - 12:00 PM">09:00 AM - 12:00 PM</option>
+                                    <option value="12:00 PM - 03:00 PM">12:00 PM - 03:00 PM</option>
+                                    <option value="03:00 PM - 06:00 PM">03:00 PM - 06:00 PM</option>
+                                    <option value="06:00 PM - 09:00 PM">06:00 PM - 09:00 PM</option>
+                                </select>
+                            </div>
+                            <div class="form-label-group py-1">
+                                <label for="StartDate">Start Date</label>
+                                <input type="date" name="StartDate" [(ngModel)]="StartDate" class="form-control" required autofocus>
+                            </div>
+    
+                            <div class="form-label-group py-1">
+                                <label for="EndDate">End Date</label>
+                                <input type="date" name="EndDate" [(ngModel)]="EndDate" class="form-control" required
+                                    autofocus>
+                            </div>
+    
+                            <div class="form-label-group py-1">
+                                <label for="yourName">Your Name</label>
+                                <input type="text" name="Name" disabled value="sourav" class="form-control" required
+                                    autofocus>
+                            </div>
+    
+                            <div *ngIf="mentorData" class="form-label-group py-1">
+                                <label for="UserName">Trainer Name</label>
+                                <input type="text" name="userName" disabled value="{{mentorData.userName}}"
+                                    class="form-control" required autofocus>
+                            </div>
+    
+                            <div *ngIf="mentorData" class="form-label-group py-1">
+                                <label for="email">Trainer Email</label>
+                                <input type="text" name="email" id="email" disabled value="{{mentorData.email}}"
+                                    class="form-control" required autofocus>
+                            </div>
+    
+    
+                            <div *ngIf="skillData" class="form-label-group py-1">
+                                <label for="name">Technology</label>
+                                <input type="text" id="name" name="name" disabled value="{{skillData.name}}"
+                                    class="form-control" required autofocus>
+                            </div>
+    
+                            <div *ngIf="skillData" class="form-label-group py-1">
+                                <label for="fees">Fees</label>
+                                <input type="text" id="fees" name="fees" disabled [(ngModel)]="skillData.fees"
+                                    value="{{skillData.fees}}" class="form-control" required autofocus>
+                            </div>
+    
+    
+                            <div *ngIf="skillData" class="form-label-group py-1">
+                                <label for="toc">TOC</label>
+                                <input type="text" name="toc" id="toc" disabled [(ngModel)]="skillData.toc"
+                                    value="{{skillData.toc}}" class="form-control" required autofocus>
+                            </div>
+    
+                            <div *ngIf="skillData" class="form-label-group py-1">
+                                <label for="prerequisites">Rrerequisites</label>
+                                <input type="text" name="prerequisites" id="prerequisites" disabled
+                                    [(ngModel)]="skillData.prerequisites" value="{{skillData.prerequisites}}"
+                                    class="form-control" required autofocus>
+                            </div>
+                            <div class="card-footer">
+                            <button class="my-4 btn btn-lg btn-info btn-block text-uppercase"  type="submit">Send
+                                Request</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-sm-2"></div>
+        </div>
+   <app-footer></app-footer>
+    

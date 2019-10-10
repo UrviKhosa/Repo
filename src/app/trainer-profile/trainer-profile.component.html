@@ -1,0 +1,113 @@
+<div class="container-fluid pl-0 pr-0">
+        <div>
+                <nav class="navbar navbar-expand-md navbar navbar-dark" style="z-index: 10;position: fixed;">
+                        <a routerLink='/trainermenu'><button type="button" class=" btn-lg btn-outline-light fa fa-home"
+                             style="margin-right: 5px" aria-hidden="true"></button></a>
+                    <a href="#" class="navbar-brand">Mentor On Demand</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        
+        
+                       
+        
+                        <form class="form-inline ml-auto">
+                            <a routerLink='/trainermenu'><button type="button" class=" btn-lg btn-outline-light fa fa-bell" data-toggle="modal"
+                                  style="margin-right: 5px" aria-hidden="true"></button></a>
+                                    <a routerLink='/trainerprofile'><button type="button" class=" btn-lg btn-outline-light fa fa-user" 
+                                         style="margin-right: 5px" aria-hidden="true"></button></a>    
+                            <a routerLink='/loginuser'><button type="button" class=" btn-lg btn-outline-light fa fa-sign-out"  style="color:white;" aria-hidden="true"></button></a>
+        
+                        </form>
+                    </div>
+                </nav>
+        </div>
+<!-------Nav End-->
+
+<div class="container-fluid">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header" style="color:white">
+                        <h4>Trainer Profile</h4>
+                    
+                </div>
+                <div class="card-body">
+
+        <div class="row" id="divst">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8 text-center">
+        <div class="table-responsive" > 
+          
+                <img class="mb-4" src="../../assets/images/training-icon.png" alt="" width="100px" height="100px">
+                <h1 class="h3 mb-3 font-weight-normal" style="color:white ">My Information</h1>
+                <table class="table table-striped">
+                        <tr style="color: white">
+                                <td>First Name</td>
+                                <td *ngIf="ProfileData && !Update">{{ProfileData.firstName}}</td>
+                                <td *ngIf="Update">
+                                 <input type="text" [(ngModel)]="ProfileData.firstName"  name="firstName" class="form-control" />
+                                </td>
+                              </tr>
+                     
+
+                            <tr style="color: white">
+                                    <td>Last Name</td>
+                                    <td *ngIf="ProfileData && !Update">{{ProfileData.lastName}}</td>
+                                    <td *ngIf="Update">
+                                    <input type="text" [(ngModel)]="ProfileData.lastName"  name="lastName" class="form-control" />
+                                    </td>
+                                  </tr>
+                          <tr style="color: white">
+
+                          <td>UserName</td>
+                          <td *ngIf="ProfileData">{{ProfileData.userName}}</td>
+                          
+                        </tr>
+
+                      <tr style="color: white">
+                          <td>Email-id</td>
+                          <td *ngIf="ProfileData">{{ProfileData.email}}</td>
+                      </tr>
+
+                      <tr style="color: white">
+                          <td>Mobile Number</td>
+                          <td *ngIf="ProfileData && !Update ">{{ProfileData.contactNumber}}</td>
+                          <td *ngIf="Update">
+                                <input type="text" [(ngModel)]="ProfileData.contactNumber"  name="contactNumber" class="form-control" />
+                          </td>
+                      </tr>
+
+                      <tr style="color: white">
+                          <td>Specialization</td>
+                          <td><p *ngIf="ProfileData">{{ProfileData.TrainerTechnology}}</p></td>
+                      </tr>
+
+                      <tr style="color: white">
+                            <td>Experience</td>
+                            <td *ngIf="ProfileData && !Update">{{ProfileData.yearOfExperience}}</td>
+                            <td *ngIf="Update">
+                            <input type="text" [(ngModel)]="ProfileData.yearOfExperience"  name="Experience" class="form-control" />
+                            </td>
+                        </tr>
+
+                        <tr style="color: white">
+                            <td></td>
+                            <td>
+                                <button class="btn btn-sm btn-info" style="margin-right: 10px " (click)="Edit()"  [hidden]="Update">Edit</button>
+                                <button class="btn btn-sm btn-info" style="margin-right: 10px" [hidden]="!Update" (click)="Save()">Save</button>
+                                <button class="btn btn-sm btn-info" style="margin-right: 10px" [hidden]="!Update" (click)="Cancel()">Cancel</button>
+                            </td>
+                        </tr>
+                    </table> 
+            </div>
+            <div class="col-md-2">
+
+            </div>
+            </div>
+        </div>
+        </div>  </div></div></div></div>
+<app-footer></app-footer>

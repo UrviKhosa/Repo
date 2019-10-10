@@ -1,0 +1,58 @@
+<div class="container-fluid">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                        <h4>Current Trainings</h4>
+                    
+                </div>
+                <div class="card-body">
+<div class="row" id="divcurt" style="z-index: -100000;">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-12 text-center">
+        <div class="table-responsive" style="margin-top:30px;"> 
+                
+                  <table class="table table-striped">
+        <thead style="color: white">
+            <tr>
+              
+                    <th>Technology</th>
+                    <th>Username</th>
+                    <th>Duration</th>
+                    <th>Progress</th>
+                    <th>Action</th>
+               
+            </tr>
+        </thead>
+        <tbody style="color: white">
+                <tr *ngFor="let i of myTrainings">
+                        <td>{{i.skillname}}</td>
+                        <td>{{i.userName}}</td>
+                        <td>{{i.startDate | date: 'dd/MM/yyyy'}} to {{i.endDate | date: 'dd/MM/yyyy'}}</td>
+                        <td *ngIf="i.progress!=undefined">{{i.progress}} %</td>
+                        <td *ngIf="i.progress==undefined">0 %</td>
+                        <td>
+                         <button type="button" class="btn btn-sm btn-success" 
+                         data-toggle="modal" data-target="#myModal"
+                         (click)="Update(i.id)">Update</button>
+                        </td>
+                     </tr>
+ 
+                 <tr *ngIf="Data" style="text-align: center">
+                     <div>
+                             <h2 style="text-align: center" style="color: white">No Records Found</h2>
+                     </div>
+                   
+                 </tr>
+            
+        </tbody>
+    </table>
+            </div>
+             <div class="col-md-2">
+
+            </div>
+            </div>
+</div></div>
+
+</div></div></div>

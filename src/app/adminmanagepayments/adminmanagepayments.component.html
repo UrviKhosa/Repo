@@ -1,0 +1,45 @@
+<div class="container-fluid">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header" style="color:white" >
+                        <h4>Payment Management</h4>
+                    
+                </div>
+                <div class="card-body">
+<div class="row" id="divcomt">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8 text-center">
+        <div class="table-responsive"> 
+              
+                  <table class="table table-striped">
+<thead style="color: white">
+            <tr>
+              
+                    <th>Technology</th>
+                    <th>Commision</th>
+                    <th>Status</th>
+                    <th>Payment Details</th>
+               
+            </tr>
+        </thead>
+        <tbody style="color: white">
+                <tr *ngFor="let i of payRecords">
+                        <td>{{i.skillName}}</td>
+                        <td>{{i.commision}}</td>
+                        <td><strong style="color: green"> Paid : {{i.fees}}</strong></td>
+                        <td>
+                         <button type="button" class="btn btn-sm btn-success" 
+                          data-toggle="modal" data-target="#myModal"
+                          (click)="update(i.id)">Update</button> 
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+            </div>
+</div>  </div></div></div></div>

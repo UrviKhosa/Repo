@@ -1,0 +1,86 @@
+        <div class="container-fluid pl-0 pr-0">
+            <div>
+                    <nav class="navbar navbar-expand-md navbar navbar-dark" style="z-index: 10;position: fixed;">
+                            <a routerLink='/usermenu'><button type="button" class=" btn-lg btn-outline-light fa fa-home"
+                                 style="margin-right: 5px" aria-hidden="true"></button></a>
+                        <a href="#" class="navbar-brand">Mentor On Demand</a>
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+            
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            
+            
+                           
+            
+                            <form class="form-inline ml-auto">
+                                <a routerLink='/usermenu'><button type="button" class=" btn-lg btn-outline-light fa fa-bell" data-toggle="modal"
+                                        data-target="#myModal" style="margin-right: 5px" aria-hidden="true"></button></a>
+                                        <a routerLink='/userprofile'><button type="button" class=" btn-lg btn-outline-light fa fa-user" 
+                                             style="margin-right: 5px" aria-hidden="true"></button></a>    
+                                <a routerLink='/loginuser'><button type="button" class=" btn-lg btn-outline-light fa fa-sign-out"  style="color:white;" aria-hidden="true"></button></a>
+            
+                            </form>
+                        </div>
+                    </nav>
+            </div>
+<!-------Nav End-->
+
+    <div class="container-fluid">
+            <div class="d-flex justify-content-center h-100">
+                <div class="card">
+                    <div class="card-header" style="color:white">
+                            <h4>User Profile</h4>
+                        
+                    </div>
+                    <div class="card-body">
+    
+            <div class="row" id="divst">
+            <div class="col-md-2">
+    
+            </div>
+            <div class="col-md-8 text-center">
+            <div class="table-responsive" > 
+              
+                    <img class="mb-4" src="../../assets/images/users-18-512.png" alt="" width="100px" height="100px">
+                    <h1 class="h3 mb-3 font-weight-normal" style="color:white ">My Information</h1>
+                   <table class="table table-striped">
+                        <tr style="color:white">
+                                <td>First Name</td>
+                                <td *ngIf="ProfileData">{{ProfileData.firstName}}</td>
+                              </tr>
+                      
+
+                            <tr style="color:white">
+                                    <td>Last Name</td>
+                                    <td *ngIf="ProfileData">{{ProfileData.lastName}}</td>
+                                  </tr>
+                          <tr style="color:white">
+
+                          <td>UserName</td>
+                          <td *ngIf="ProfileData">{{ProfileData.userName}}</td>
+                        </tr>
+
+                      <tr style="color:white">
+                          <td>Email-id</td>
+                          <td *ngIf="ProfileData">{{ProfileData.email}}</td>
+                      </tr>
+
+                      <tr style="color:white">
+                          <td>Mobile Number</td>
+                          <td *ngIf="ProfileData">{{ProfileData.contactNumber}}</td>
+                      </tr>
+
+                      <tr *ngIf="TrainingDtls" style="color:white">
+                          <td>Enrolled In</td>
+                          <td><p *ngFor="let i of TrainingDtls">{{i.skillname}}</p></td>
+                      </tr>
+                   </table> 
+                </div>
+                <div class="col-md-2">
+    
+                </div>
+                </div>
+            </div>
+            </div>  </div></div></div>
+    <app-footer></app-footer>

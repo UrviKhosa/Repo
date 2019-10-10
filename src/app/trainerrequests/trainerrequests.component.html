@@ -1,0 +1,71 @@
+<div class="container">
+        <div class="d-flex justify-content-center h-100">
+            
+                
+                <div class="card" style="padding: 30px">
+                        <div class="row">
+                
+                                <div class="col-md-4">
+                                <div class="table-responsive" style="margin-top:30px;"> 
+                                       
+                                          <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Requested</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let i of Requested" style="color: white">
+                                        <p><strong>{{i.userName}} Requested {{i.skillname}} from {{i.startDate | date: 'dd/MM/yyyy'}} to {{i.endDate | date: 'dd/MM/yyyy'}}</strong></p>
+                                        <p>
+                            <button type="button" class="btn btn-sm btn-success" (click)="RequestApproved(i.id)">Approve</button>
+        
+                            <button type="button" class="btn btn-sm btn-danger"(click)="RequestDeclined(i.id)">Decline</button>
+                                        </p>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 text-center">
+                            <div class="table-responsive" style="margin-top:30px;"> 
+                                      <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                  <th>Approved</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr *ngFor="let i of Approved" style="color: white">
+                                            <p><strong>- {{i.userName}} Approved for {{i.skillname}} from {{i.startDate | date: 'dd/MM/yyyy'}} to {{i.endDate | date: 'dd/MM/yyyy'}}</strong></p>
+                                          
+                                        </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        
+        
+                <div class="col-md-4 text-center">
+                        <div class="table-responsive" style="margin-top:30px;"> 
+                                <table class="table">
+                      <thead class="thead-dark">
+                          <tr>
+                            <th>Rejected</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                              <tr *ngFor="let i of Declined" style="color: white">
+                                      <p><strong>- Rejected {{i.userName}} for {{i.skillname}} from {{i.startDate | date: 'dd/MM/yyyy'}} to {{i.endDate | date: 'dd/MM/yyyy'}}</strong></p>
+                                  </tr>
+                      </tbody>
+                  </table>
+              </div>
+            </div>
+        
+                </div> 
+                </div>
+                
+            </div>
+        </div>

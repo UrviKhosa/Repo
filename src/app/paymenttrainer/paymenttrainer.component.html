@@ -1,0 +1,44 @@
+<div class="container-fluid">
+                <div class="d-flex justify-content-center h-100">
+                    <div class="card">
+                        <div class="card-header">
+                                        <h4>Payment Management</h4>
+                            
+                        </div>
+                        <div class="card-body">
+<div class="row" id="divPay" style="z-index: -100000;">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8 text-center">
+        <div class="table-responsive"> 
+                
+                  <table class="table">
+        <thead style="color: white">
+            <tr>
+              
+                        <th>Technology</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Payment Details</th>
+               
+            </tr>
+        </thead>
+        <tbody style="color: white">
+            
+                        <tr *ngFor="let i of myPayRecord">
+                                        <td>{{i.skillName}}</td>
+                                        <td></td>
+                                        <td><strong style="color: green"> Paid : {{i.fees}}</strong></td>
+                                        <td>
+                                        <button type="button" class="btn btn-primary">See Details</button>
+                                        </td>
+                                    </tr>
+        </tbody>
+    </table>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+            </div>
+</div>  </div></div></div></div>
