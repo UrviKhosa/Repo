@@ -28,8 +28,11 @@ import { TrainerrequestsComponent } from './trainerrequests/trainerrequests.comp
 import { UserpayComponent } from './userpay/userpay.component';
 
 
+
 const routes: Routes = [
    {path:'',redirectTo:'index',pathMatch:'full'},
+  
+
    {path:'index',component:MainPageIndexComponent},
   {path:'loginuser',component:LoginPageUserComponent},
   {path:'logintrainer',component:TrainerLoginPageComponent},

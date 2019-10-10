@@ -35,7 +35,7 @@ import { TrainerProfileComponent } from './trainer-profile/trainer-profile.compo
 import { SelecttrainerComponent } from './selecttrainer/selecttrainer.component';
 import { UserrequestComponent } from './userrequest/userrequest.component';
 import { TrainerrequestsComponent } from './trainerrequests/trainerrequests.component';
-import { MainpageComponent } from './mainpage/mainpage.component';
+
 import { UserpayComponent } from './userpay/userpay.component';
 @NgModule({
   declarations: [
@@ -67,7 +67,7 @@ import { UserpayComponent } from './userpay/userpay.component';
     SelecttrainerComponent,
     UserrequestComponent,
     TrainerrequestsComponent,
-    MainpageComponent,
+  
     UserpayComponent,
   ],
   imports: [

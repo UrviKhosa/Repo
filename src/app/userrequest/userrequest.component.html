@@ -53,18 +53,18 @@
                   <!-- Modal content-->
                   <div *ngIf="ReciptData"class="modal-content">
                     <div class="modal-header">
-                      <h4 class="modal-title">Payment Recipt</h4>
+                      <h4 class="modal-title" style="color:green">Payment Recipt</h4>
                     </div>
-                  <div class="modal-body" *ngFor="let i of ReciptData" style="text-align: left">
+                  <div class="modal-body" *ngFor="let i of ReciptData" style="text-align: left;color:green">
                     <h6>Training - {{i.skillName}}</h6>
                     <hr>
-                      <p *ngIf="i.PaymentStatus">Payment Status - <span style="color:green">Confirmed</span></p>
+                      <p *ngIf="i.PaymentStatus" style="color:green">Payment Status - <span style="color:green">Confirmed</span></p>
                       <hr>
-                      <p>Amount Paid -<span style="color:green">&#8377;{{i.fees}}</span> </p>
+                      <p style="color:green">Amount Paid -<span style="color:green">&#8377;{{i.fees}}</span> </p>
                     
                   </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                     </div>
                   </div>
               

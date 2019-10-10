@@ -67,7 +67,7 @@ export class UserrequestComponent implements OnInit {
       ID:id,
    };
  
-    this.route.navigate(['/Payment'],{queryParams:data});  
+    this.route.navigate(['/userpay'],{queryParams:data});  
   }
 
   SeeRecipt(id)
