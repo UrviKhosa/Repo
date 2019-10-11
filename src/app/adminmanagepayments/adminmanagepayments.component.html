@@ -31,13 +31,38 @@
                         <td><strong style="color: green"> Paid : {{i.fees}}</strong></td>
                         <td>
                          <button type="button" class="btn btn-sm btn-success" 
-                          data-toggle="modal" data-target="#myModal"
+                          data-toggle="modal" data-target="#myMod"
                           (click)="update(i.id)">Update</button> 
                         </td>
                     </tr>
         </tbody>
     </table>
             </div>
+            <div id="myMod" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                  
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">Update Commision</h4>
+                        </div>
+                      <div class="modal-body" style="text-align: left">
+                        <h6>Add Commision</h6>
+                        <hr>
+                        <input name="Commision" placeholder="Enter Commision" class="rounded" [(ngModel)]="Commision">
+                        <br><br> 
+                        <input name="Fee"  class="rounded" [(ngModel)]="Fee" disabled>
+                        <br><br>
+                        <button type="button" class="btn btn-sm btn-success"(click)="Mainupdate()">Save</button>
+                   
+                      </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                  
+                    </div>
+                  </div>
             <div class="col-md-2">
 
             </div>

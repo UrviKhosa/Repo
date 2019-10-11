@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavLoaderComponent } from './nav-loader/nav-loader.component';
 // import { HomeComponent } from './home/home.component';
-import { MainPageIndexComponent } from './main-page-index/main-page-index.component';
 import { LoginPageUserComponent } from './login-page-user/login-page-user.component';
 import { TrainerLoginPageComponent } from './trainer-login-page/trainer-login-page.component';
 import { UserSignUpPageComponent } from './user-sign-up-page/user-sign-up-page.component';
@@ -37,12 +36,12 @@ import { UserrequestComponent } from './userrequest/userrequest.component';
 import { TrainerrequestsComponent } from './trainerrequests/trainerrequests.component';
 
 import { UserpayComponent } from './userpay/userpay.component';
+import { HomepageComponent } from './homepage/homepage.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavLoaderComponent,
     // HomeComponent,
-    MainPageIndexComponent,
     LoginPageUserComponent,
     TrainerLoginPageComponent,
     UserSignUpPageComponent,
@@ -69,6 +68,8 @@ import { UserpayComponent } from './userpay/userpay.component';
     TrainerrequestsComponent,
   
     UserpayComponent,
+  
+    HomepageComponent,
   ],
   imports: [
     BrowserModule,

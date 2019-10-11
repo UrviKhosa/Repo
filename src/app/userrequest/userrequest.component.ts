@@ -62,7 +62,7 @@ export class UserrequestComponent implements OnInit {
 
   Pay(id)
   {
-    alert(id);  
+    
     const data={
       ID:id,
    };

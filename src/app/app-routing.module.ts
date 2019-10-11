@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { MainPageIndexComponent } from './main-page-index/main-page-index.component';
 import { LoginPageUserComponent } from './login-page-user/login-page-user.component';
 import { TrainerLoginPageComponent } from './trainer-login-page/trainer-login-page.component';
 import { UserSignUpPageComponent } from './user-sign-up-page/user-sign-up-page.component';
@@ -26,6 +25,7 @@ import { SelecttrainerComponent } from './selecttrainer/selecttrainer.component'
 import { UserrequestComponent } from './userrequest/userrequest.component';
 import { TrainerrequestsComponent } from './trainerrequests/trainerrequests.component';
 import { UserpayComponent } from './userpay/userpay.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 
@@ -33,7 +33,9 @@ const routes: Routes = [
    {path:'',redirectTo:'index',pathMatch:'full'},
   
 
-   {path:'index',component:MainPageIndexComponent},
+   {path:'index',component:HomepageComponent},
+
+
   {path:'loginuser',component:LoginPageUserComponent},
   {path:'logintrainer',component:TrainerLoginPageComponent},
   {path:'signupuser',component:UserSignUpPageComponent},

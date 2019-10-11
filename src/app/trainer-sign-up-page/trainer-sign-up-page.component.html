@@ -10,20 +10,20 @@
             <div class="form-group col required">
                 <label>First Name</label>
                 <input class="form-control" formControlName="firstName">
-                <small class="text-danger"
+                <small class="alert alert-info"
                     *ngIf="MentorRegister.get('firstName').touched && MentorRegister.get('firstName').errors?.required">This
                     field is mandatory</small>
-                <small class="text-danger"
+                <small class="alert alert-info"
                     *ngIf="MentorRegister.get('firstName').touched && MentorRegister.get('firstName').errors?.pattern">firstName
                     cannot have special characters or digits</small>
             </div>
             <div class="form-group col required">
                 <label>Last Name</label>
                 <input class="form-control" formControlName="lastName">
-                <small class="text-danger"
+                <small class="alert alert-info"
                     *ngIf="MentorRegister.get('lastName').touched && MentorRegister.get('lastName').errors?.required">This
                     field is mandatory</small>
-                <small class="text-danger"
+                <small class="alert alert-info"
                     *ngIf="MentorRegister.get('lastName').touched && MentorRegister.get('lastName').errors?.pattern">lastName
                     cannot have special characters or digits</small>
             </div>
@@ -31,10 +31,10 @@
         <div class="form-group required">
             <label>Email</label>
             <input class="form-control" formControlName="Email">
-            <small class="text-danger"
+            <small class="alert alert-info"
                 *ngIf="MentorRegister.get('Email').touched && MentorRegister.get('Email').errors?.required">This
                 field is mandatory</small>
-            <small class="text-danger"
+            <small class="alert alert-info"
                 *ngIf="MentorRegister.get('Email').touched && MentorRegister.get('Email').errors?.pattern">Invalid
                 Email Address</small>
         </div>
@@ -42,10 +42,10 @@
         <div class="form-group required">
             <label>Phone Number</label>
             <input class="form-control" formControlName="Phone">
-            <small class="text-danger"
+            <small class="alert alert-info"
                 *ngIf="MentorRegister.get('Phone').touched && MentorRegister.get('Phone').errors?.required">This
                 field is mandatory</small>
-            <small class="text-danger"
+            <small class="alert alert-info"
                 *ngIf="MentorRegister.get('Phone').touched && MentorRegister.get('Phone').errors?.pattern">Invalid
                 Phone Number</small>
         </div>
@@ -54,20 +54,20 @@
             <div class="form-group col required">
                 <label>Enter Password</label>
                 <input type="password" class="form-control" formControlName="Password">
-                <small class="text-danger"
+                <small class="alert alert-info"
                     *ngIf="MentorRegister.get('Passwords.Password').touched && MentorRegister.get('Passwords.Password').errors?.required">This
                     field is mandatory</small>
-                <small class="text-danger"
+                <small class="alert alert-info"
                     *ngIf="MentorRegister.get('Passwords.Password').touched && MentorRegister.get('Passwords.Password').errors?.minlength">Minimun
                     8 characters required</small>
             </div>
             <div class="form-group col required">
                 <label>Confirm Password</label>
                 <input type="password" class="form-control" formControlName="ConfirmPassword">
-                <small class="text-danger"
+                <small class="alert alert-info"
                     *ngIf="MentorRegister.get('Passwords.ConfirmPassword').touched && MentorRegister.get('Passwords.ConfirmPassword').errors?.required">This
                     field is mandatory</small>
-                <small class="text-danger"
+                <small class="alert alert-info"
                     *ngIf="MentorRegister.get('Passwords.ConfirmPassword').touched && MentorRegister.get('Passwords.ConfirmPassword').errors?.passwordMismatch">Confirm
                     Password does not match</small>
             </div>
@@ -76,20 +76,20 @@
         <div class="form-group required">
             <label>Linkedin Url</label>
             <input class="form-control" formControlName="LinkedinURL">
-            <small class="text-danger"
+            <small class="alert alert-info"
                 *ngIf="MentorRegister.get('LinkedinURL').touched && MentorRegister.get('LinkedinURL').errors?.required">This
                 field is mandatory</small>
-            <small class="text-danger"
+            <small class="alert alert-info"
                 *ngIf="MentorRegister.get('LinkedinURL').touched && MentorRegister.get('LinkedinURL').errors?.pattern">Invalid
                 Linkedin Url </small>
         </div>
         <div class="form-group required">
             <label>Experience</label>
             <input class="form-control" formControlName="Experience">
-            <small class="text-danger"
+            <small class="alert alert-info"
                 *ngIf="MentorRegister.get('Experience').touched && MentorRegister.get('Experience').errors?.required">This
                 field is mandatory</small>
-            <small class="text-danger"
+            <small class="alert alert-info"
                 *ngIf="MentorRegister.get('Experience').touched && MentorRegister.get('Experience').errors?.pattern">Invalid
                 Experience in number
             </small>
@@ -100,7 +100,7 @@
                 <select formControlName="Timings" class="form-control rounded text-center dropdown">
                     <option *ngFor="let i of SKillData" value="{{i.timings}}">{{i.timings}}</option>
                 </select>
-                <small class="text-danger"
+                <small class="alert alert-info"
                     *ngIf="MentorRegister.get('Timings').touched && MentorRegister.get('Timings').errors?.required">This
                     field is mandatory</small>
             </div> -->
@@ -110,7 +110,7 @@
                 <select formControlName="Technology" class="form-control rounded text-center dropdown">
                       <option *ngFor="let i of SKillData" value="{{i.name}}">{{i.name}}</option>
                 </select>
-                <small class="text-danger"
+                <small class="alert alert-info"
                 *ngIf="MentorRegister.get('Technology').touched && MentorRegister.get('Technology').errors?.required">This
                 field is mandatory</small>
             </div>
